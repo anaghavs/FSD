@@ -73,29 +73,31 @@
                 <div class="col-lg-6">
                     <img src="./signup.jpg" style="width: 500px; height: 400px;">
                 </div>
-                <form>
+                <form action="login.html" onsubmit="return valid();">
                     <div class="col-lg-6">
                         <div class="form-row">
 
                             <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <input type="text" placeholder="eg:Name@gmail.com" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" pattern="([A-Za-z0-9\.\-]+)@([A-Za-z0-9\-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?" required>
+                        </div>
+                        <div class="form-row">
+
+                            <label for="inputnumber4">Contact Number</label>
+                            <input type="number" class="form-control" id="contact">
                         </div>
 
                         <div class="form-row">
 
                             <label for="inputPassword4">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4">
+                            <input type="password" class="form-control" id="password" onkeyup="return passwordChanged();">
+                            <span id="strength"></span><br>
                         </div>
                         <div class="form-row">
                             <label for="inputPassword4">Re-enter Password</label>
-                            <input type="password" class="form-control" id="inputPassword4">
+                            <input type="password" class="form-control" id="password2">
                         </div>
                     </div>
-                    <div class="form-row">
 
-                        <label for="inputnumber4">Contact Number</label>
-                        <input type="number" class="form-control" id="inputnumber4">
-                    </div>
 
 
 
@@ -110,10 +112,12 @@
                     <button type="submit" class="btn btn-primary">Sign Up</button>
             </div>
             </form>
+            <script src="validation.js"></script>
 
         </div>
     </div>
     </div>
+
 </body>
 
 </html>
